@@ -1,0 +1,1413 @@
+ body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f3f3f5; /* Added a light background to the body */
+        }
+        .topbar {
+            background: #6a9306;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px 10px 10px;
+            height: 38px;
+            font-weight: 500;
+            font-size: large;
+        }
+        .topbar-left {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .logo {
+            height: 28px;
+            margin: 0 10px 0 10px;
+        }
+        .top-links {
+            font-size: 13px;
+            margin-left: 8px;
+            display: flex; /* Added for better spacing on mobile */
+            flex-wrap: wrap; /* Added for wrapping on mobile */
+            justify-content: center; /* Center links on mobile */
+            padding-left: 5px;
+        }
+        .top-links a {
+            color: oklab(91.605% 0.00834 0.0025);
+            text-decoration: none;
+            margin: 0 4px;
+            font-weight: 400;
+        }
+        .top-links a:hover {
+            text-decoration: underline;
+        }
+        .topbar-right {
+            display: flex;
+            align-items: center;
+        }
+        .search-box {
+            padding: 3px 6px;
+            border: none;
+            border-radius: 2px 0 0 2px;
+            font-size: 13px;
+            width: 170px;
+            height: 19px;
+        }
+        .search-btn {
+            border: none;
+            background:white;
+            padding: 3px 10px;
+            border-radius: 0 2px 2px 0;
+            cursor: pointer;
+        }
+        .mainnav {
+            background: #6a9306;
+            color: #fff;
+            display: flex;
+            border-top: 1px solid #5e8305;
+            border-bottom: 1px solid #5e8305;
+            height: 30px;
+        }
+        .mainnav a {
+            flex: 1;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            border-right: 1px solid #7ea90a;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+        }
+        .mainnav a:last-child {
+            border-right: none;
+        }
+        .mainnav a:hover {
+            background: #7ea90a;
+        }
+        .fidelity-promo-section {
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-start;
+            width: 100%;
+            min-height: 230px;
+            background: #fff;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .fidelity-login-box {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            width: 320px;
+            padding: 32px 0 32px 7%;
+            background: #fff;
+        }
+        .fidelity-login-form {
+            display: flex;
+            flex-direction: column;
+            width: 210px;
+        }
+        .fidelity-login-form label {
+            margin-bottom: 4px;
+            font-size: 15px;
+            color: #222;
+            font-weight: 500;
+        }
+        .fidelity-need-help {
+            font-size: 12px;
+            color: #2074b6;
+            text-decoration: none;
+            float: right;
+            margin-top: -22px;
+            margin-bottom: 10px;
+        }
+        .fidelity-login-form input[type="text"],
+        .fidelity-login-form input[type="password"] {
+            padding: 6px 8px;
+            margin-bottom: 10px;
+            border: 2px solid #b23c8a;
+            border-radius: 2px;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .fidelity-login-form input[type="text"]:focus,
+        .fidelity-login-form input[type="password"]:focus {
+            border-color: #b23c8a;
+        }
+        .fidelity-remember-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .fidelity-remember-row input[type="checkbox"] {
+            margin-right: 6px;
+        }
+        .fidelity-remember-label {
+            font-size: 11px;
+            color: #888;
+        }
+        .fidelity-login-btn {
+            background: linear-gradient(180deg,#2989c9 0%,#2074b6 100%);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 0;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+        .fidelity-login-btn:hover {
+            background: #155a8a;
+        }
+        .fidelity-promo-center {
+            flex: 1;
+            padding: 32px 0 32px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-left: 1px solid #ccc;
+            max-width: 430px;
+        }
+        .fidelity-promo-center h1 {
+            font-size: 2rem;
+            margin: 0 0 16px 0;
+            color: #222;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+        }
+        .fidelity-promo-center p {
+            color: #222;
+            font-size: 15px;
+            margin-bottom: 16px;
+            margin-top: 0;
+            font-weight: 600;
+        }
+        .fidelity-get-started {
+            color: #b23c8a;
+            font-weight: 400;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .fidelity-get-started:hover {
+            text-decoration: underline;
+        }
+        .fidelity-promo-image {
+            flex: 1 1 0;
+            min-width: 340px;
+            background: url('image.png') no-repeat center center;
+            background-size: cover;
+        }
+        @media (max-width: 900px) {
+            .topbar {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+            .topbar-left {
+                flex-direction: column;
+                margin-bottom: 10px;
+            }
+            .top-links {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+            .topbar-right {
+                width: 100%;
+                justify-content: center;
+            }
+            .search-box {
+                width: 100%;
+                max-width: 250px; /* Limit width on smaller screens */
+            }
+            .mainnav {
+                flex-direction: column;
+                height: auto;
+            }
+            .mainnav a {
+                border-right: none;
+                border-bottom: 1px solid #7ea90a;
+                padding: 8px 0;
+            }
+            .mainnav a:last-child {
+                border-bottom: none;
+            }
+            .fidelity-promo-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .fidelity-promo-image {
+                min-width: 100%;
+                height: 160px;
+            }
+            .fidelity-promo-center, .fidelity-login-box {
+                width: 100%;
+                max-width: unset;
+                padding: 24px 0;
+                border-left: none;
+                border-top: 1px solid #ccc;
+                text-align: center; /* Center text on mobile */
+            }
+            .fidelity-login-box {
+                justify-content: center; /* Center login form */
+            }
+            .fidelity-login-form {
+                width: 80%; /* Adjust form width */
+                max-width: 300px;
+            }
+            .fidelity-need-help {
+                float: none; /* Remove float for centering */
+                margin-top: 0;
+                text-align: center;
+            }
+            .fidelity-promo-center h1, .fidelity-promo-center p {
+                text-align: center;
+            }
+        }
+        .banner {
+            background: #f3f3f3;
+            color: #1a1a1a;
+            display: flex;
+            align-items: flex-start;
+            padding-left: 70px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+            height: 80px;
+        }
+        .banner-icon {
+            width: 60px;
+            height: 80px;
+            background: #2e4c6d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .banner-icon::before {
+            content: "i";
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            position: absolute;
+            left: 25px;
+            top: 28px;
+            font-family: Arial, sans-serif;
+        }
+        .banner-content {
+            padding: 12px 0 0 16px;
+            display: flex;
+            flex-direction: column;
+        }
+        .banner-content strong {
+            color: #00529b;
+            font-size: 15px;
+        }
+        .banner-content span {
+            font-size: 15px;
+            margin-top: 2px;
+        }
+        @media (max-width: 900px) {
+            .banner {
+                flex-direction: column;
+                height: auto;
+                padding-bottom: 10px;
+            }
+            .banner-icon {
+                width: 100%;
+                height: 40px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .banner-icon::before {
+                position: static; /* Reset position for centering */
+                display: block;
+                text-align: center;
+                line-height: 1; /* Adjust line height */
+            }
+            .banner-content {
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+        .fidelity-invest-section {
+            width: 100%;
+            background: #f3f3f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 0 60px 0;
+        }
+
+        .fidelity-invest-card {
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            max-width: 900px;
+            width: 90%;
+            margin-top: -40px;
+            padding: 40px 40px 30px 40px;
+            box-sizing: border-box;
+        }
+
+        .fidelity-invest-title {
+            text-align: center;
+            font-weight: 400;
+            font-size: 28px;
+            color: #444;
+            margin-bottom: 28px;
+            margin-top: 0;
+            letter-spacing: 0.01em;
+        }
+
+        .fidelity-invest-features {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+        .fidelity-invest-feature {
+            flex: 1;
+            text-align: center;
+            padding: 0 18px;
+        }
+
+        .fidelity-invest-feature h3 {
+            color: #8f198c;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .fidelity-invest-feature p {
+            color: #222;
+            font-size: 15px;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .fidelity-retirement-score {
+            margin-top: 24px;
+            text-align: left;
+            background-color: #f3f3f3; /* Added background for visual separation */
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .fidelity-retirement-score h2 {
+            font-weight: 400;
+            font-size: 24px;
+            color: #444;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .fidelity-retirement-score p {
+            color: #444;
+            font-size: 15px;
+            margin-bottom: 8px;
+            margin-top: 0;
+            font-weight: 400;
+        }
+
+        .fidelity-score-link {
+            color: #8f198c;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .fidelity-score-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .fidelity-invest-card {
+                padding: 18px 8px 18px 8px;
+            }
+            .fidelity-invest-features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .fidelity-invest-feature {
+                padding: 0 0 28px 0;
+            }
+            .fidelity-retirement-score {
+                text-align: center; /* Center text on mobile */
+            }
+        }
+        .fidelity-advisory-section {
+            width: 100%;
+            background: #f3f3f5;
+            display: flex;
+            justify-content: center;
+            padding: 0 0 40px 0;
+        }
+
+        .fidelity-advisory-card {
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            max-width: 900px;
+            width: 90%;
+            margin-top: 0;
+            padding: 36px 40px 36px 40px;
+            box-sizing: border-box;
+        }
+
+        .fidelity-advisory-title {
+            text-align: center;
+            font-weight: 400;
+            font-size: 25px;
+            color: #444;
+            margin-bottom: 32px;
+            margin-top: 0;
+            letter-spacing: 0.01em;
+        }
+
+        .fidelity-advisory-features {
+            display: flex;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .fidelity-advisory-feature {
+            flex: 1;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        .fidelity-advisory-feature h3 {
+            color: #8f198c;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            margin-top: 0;
+            letter-spacing: 0.01em;
+        }
+
+        .fidelity-advisory-sub {
+            display: block;
+            color: #888;
+            font-size: 13px;
+            font-weight: 400;
+            margin-top: 1px;
+            letter-spacing: 0;
+        }
+
+        .fidelity-advisory-feature p {
+            color: #222;
+            font-size: 15px;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        @media (max-width: 900px) {
+            .fidelity-advisory-card {
+                padding: 18px 8px 18px 8px;
+            }
+            .fidelity-advisory-features {
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+            }
+            .fidelity-advisory-feature {
+                padding: 0 0 28px 0;
+                text-align: center; /* Center text on mobile */
+            }
+        }
+        .fidelity-comparison-section {
+            width: 100%;
+            background: #f3f3f5;
+            display: flex;
+            justify-content: center;
+            padding: 0 0 44px 0;
+        }
+        .fidelity-comparison-card {
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            max-width: 900px;
+            width: 90%;
+            margin-top: 0;
+            padding: 36px 40px 30px 40px;
+            box-sizing: border-box;
+        }
+        .fidelity-comparison-tabs {
+            display: flex;
+            margin-bottom: 0;
+            justify-content: center; /* Center tabs */
+            flex-wrap: wrap; /* Allow tabs to wrap */
+        }
+        .fidelity-comparison-tabs button {
+            background: #f7f7f7;
+            border: none;
+            border-radius: 7px 7px 0 0;
+            font-size: 16px;
+            color: #444;
+            padding: 8px 32px;
+            margin-right: 2px;
+            cursor: pointer;
+            font-weight: 400;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 5px; /* Add margin for wrapped tabs */
+        }
+        .fidelity-comparison-tabs .active {
+            background: #fff;
+            color: #444;
+            border-bottom: 2px solid #fff;
+            font-weight: 500;
+        }
+        .fidelity-comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 36px;
+            margin-top: 0;
+            font-size: 15px;
+            overflow-x: auto; /* Enable horizontal scrolling for table */
+            display: block; /* Make table a block to allow overflow */
+            white-space: nowrap; /* Prevent content from wrapping inside cells */
+        }
+        .fidelity-comparison-table th,
+        .fidelity-comparison-table td {
+            padding: 10px 12px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        .fidelity-comparison-table th {
+            background: #fff;
+            color: #444;
+            font-weight: 600;
+            border-bottom: 2px solid #eee;
+        }
+        .fidelity-comparison-table td {
+            color: #222;
+            font-weight: 400;
+        }
+        .fidelity-comparison-table td:first-child,
+        .fidelity-comparison-table th:first-child {
+            text-align: left;
+            color: #8f198c;
+            font-weight: 400;
+            border-right: 1px solid #eee;
+        }
+        .fidelity-yes {
+            background: #7ea90a;
+            color: #fff;
+            border-radius: 2px;
+            font-weight: 500;
+        }
+        .fidelity-green {
+            background: #eaf6e2;
+            color: #3a7a10;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+        .fidelity-link {
+            color: #8f198c;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .fidelity-link.pink {
+            color: #b23c8a;
+        }
+        .fidelity-link:hover {
+            text-decoration: underline;
+        }
+        .fidelity-awards {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 40px;
+        }
+        .fidelity-award {
+            flex: 1;
+            text-align: center;
+            padding: 0 12px;
+        }
+        .fidelity-award img {
+            height: 48px;
+            margin-bottom: 10px;
+            max-width: 120px;
+        }
+        .fidelity-award-line {
+            width: 50px;
+            height: 2px;
+            background: #ccc;
+            margin: 8px auto 8px auto;
+            display: block;
+        }
+        .fidelity-award-text {
+            color: #222;
+            font-size: 15px;
+            margin-top: 4px;
+            font-weight: 400;
+        }
+        .fidelity-award-text b {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        @media (max-width: 900px) {
+            .fidelity-comparison-card {
+                padding: 18px 8px 18px 8px;
+            }
+            .fidelity-awards {
+                flex-direction: column;
+                align-items: center;
+                gap: 18px;
+            }
+            .fidelity-award {
+                padding: 0 0 18px 0;
+            }
+            .fidelity-comparison-table {
+                width: auto; /* Allow table to shrink if content is narrow */
+            }
+        }
+        .fidelity-help-section {
+            width: 100%;
+            background: #f3f3f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 0 40px 0;
+        }
+        .fidelity-help-top {
+            background: #f6f6f6;
+            border-radius: 0 0 0 0;
+            text-align: center;
+            padding: 38px 0 34px 0;
+            margin-bottom: 0;
+            width: 100%; /* Ensure it takes full width */
+        }
+        .fidelity-help-top h2 {
+            font-weight: 400;
+            font-size: 25px;
+            color: #444;
+            margin: 0 0 16px 0;
+            letter-spacing: 0.01em;
+        }
+        .fidelity-help-top p {
+            color: #222;
+            font-size: 16px;
+            margin: 0 0 22px 0;
+            font-weight: 400;
+        }
+        .fidelity-open-account-btn {
+            background: linear-gradient(180deg,#f7b042 0%,#e98b1d 100%);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 28px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            transition: background 0.2s;
+        }
+        .fidelity-open-account-btn:hover {
+            background: #e98b1d;
+        }
+        .fidelity-help-bottom {
+            background: #fff;
+            border-radius: 0 0 6px 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            max-width: 900px;
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 0 0 38px 0;
+            position: relative;
+            top: -12px;
+        }
+        .fidelity-help-left {
+            flex: 0 0 170px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 100%;
+            min-width: 140px;
+            margin-left: 36px;
+        }
+        .fidelity-help-left img {
+            width: 120px;
+            margin-top: 38px;
+            margin-bottom: 0;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.10);
+            border-radius: 12px;
+        }
+        .fidelity-help-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 26px 0 0 0;
+        }
+        .fidelity-help-right h2 {
+            font-weight: 400;
+            font-size: 22px;
+            color: #444;
+            margin: 0 0 20px 0;
+        }
+        .fidelity-help-products {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 44px;
+            margin-bottom: 16px;
+        }
+        .fidelity-help-product {
+            text-align: center;
+            min-width: 180px;
+        }
+        .fidelity-help-link {
+            color: #8f198c;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .fidelity-help-link:hover {
+            text-decoration: underline;
+        }
+        .fidelity-help-stars {
+            color: #f7b042;
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+        .fidelity-help-rating {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .fidelity-help-seeall {
+            color: #8f198c;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .fidelity-help-seeall:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 900px) {
+            .fidelity-help-bottom {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 0 24px 0;
+            }
+            .fidelity-help-left {
+                margin-left: 0;
+                margin-bottom: 16px;
+            }
+            .fidelity-help-products {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .fidelity-help-right {
+                padding: 10px; /* Adjust padding for mobile */
+            }
+        }
+        .fidelity-experts-section {
+            width: 100%;
+            background: #f3f3f5;
+            display: flex;
+            justify-content: center;
+            padding: 0 0 40px 0;
+        }
+        .fidelity-experts-card {
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            max-width: 900px;
+            width: 90%;
+            margin-top: 0;
+            padding: 36px 40px 36px 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        .fidelity-experts-left {
+            flex: 1.2;
+            padding-right: 30px;
+            border-right: 1px solid #e0e0e0;
+        }
+        .fidelity-experts-left h2 {
+            font-weight: 400;
+            font-size: 23px;
+            color: #444;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+        .fidelity-expert-article {
+            margin-bottom: 14px;
+        }
+        .fidelity-expert-link {
+            color: #8f198c;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            display: block;
+            margin-bottom: 3px;
+        }
+        .fidelity-expert-link.pink {
+            color: #b23c8a;
+        }
+        .fidelity-expert-link:hover {
+            text-decoration: underline;
+        }
+        .fidelity-expert-desc {
+            color: #222;
+            font-size: 15px;
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+        .fidelity-expert-seeall {
+            color: #8f198c;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            display: block;
+            margin-top: 14px;
+        }
+        .fidelity-expert-seeall:hover {
+            text-decoration: underline;
+        }
+        .fidelity-experts-right {
+            flex: 1;
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        .fidelity-expert-signup-title {
+            font-size: 17px;
+            font-weight: 400;
+            color: #222;
+            margin-bottom: 7px;
+        }
+        .fidelity-expert-signup-desc {
+            color: #222;
+            font-size: 14px;
+            margin-bottom: 13px;
+        }
+        .fidelity-expert-signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .fidelity-expert-signup-form label {
+            font-size: 13px;
+            color: #222;
+            font-weight: 400;
+            margin-bottom: 2px;
+        }
+        .fidelity-expert-signup-form input[type="text"],
+        .fidelity-expert-signup-form input[type="email"] {
+            padding: 6px 8px;
+            border: 1.5px solid #bbb;
+            border-radius: 2px;
+            font-size: 15px;
+            outline: none;
+            margin-bottom: 3px;
+        }
+        .fidelity-expert-signup-btn {
+            background: linear-gradient(180deg,#2989c9 0%,#2074b6 100%);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 0;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: background 0.2s;
+        }
+        .fidelity-expert-signup-btn:hover {
+            background: #155a8a;
+        }
+        @media (max-width: 900px) {
+            .fidelity-experts-card {
+                flex-direction: column;
+                padding: 18px 8px 18px 8px;
+                gap: 0;
+            }
+            .fidelity-experts-left {
+                border-right: none;
+                padding-right: 0;
+                margin-bottom: 22px;
+            }
+            .fidelity-experts-right {
+                padding-left: 0;
+            }
+        }
+        .fidelity-helpcenter-section {
+            width: 100%;
+            background: #f3f3f5;
+            display: flex;
+            justify-content: center;
+            padding: 0 0 40px 0;
+        }
+        .fidelity-helpcenter-card {
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            max-width: 900px;
+            width: 90%;
+            margin-top: 0;
+            padding: 36px 40px 36px 40px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .fidelity-helpcenter-title {
+            font-weight: 400;
+            font-size: 25px;
+            color: #444;
+            margin-bottom: 12px;
+            margin-top: 0;
+            letter-spacing: 0.01em;
+        }
+        .fidelity-helpcenter-desc {
+            color: #222;
+            font-size: 16px;
+            margin-bottom: 28px;
+            font-weight: 400;
+        }
+        .fidelity-helpcenter-options {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 70px;
+            margin-top: 8px;
+        }
+        .fidelity-helpcenter-option {
+            text-align: center;
+            min-width: 160px;
+        }
+        .fidelity-helpcenter-icon {
+            margin-bottom: 10px;
+        }
+        .fidelity-helpcenter-label {
+            color: #222;
+            font-size: 16px;
+            margin-top: 0;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+        .fidelity-helpcenter-label b {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .fidelity-helpcenter-label.purple {
+            color: #8f198c;
+        }
+        @media (max-width: 900px) {
+            .fidelity-helpcenter-card {
+                padding: 18px 8px 18px 8px;
+            }
+            .fidelity-helpcenter-options {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+        .fidelity-footer-sites {
+            width: 100%;
+            background: #f3f3f5;
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #e0e0e0;
+            padding: 0;
+        }
+        .fidelity-footer-sites-inner {
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 14px 0 14px 0;
+            gap: 60px;
+        }
+        .fidelity-footer-sites-label {
+            font-weight: 600;
+            color: #222;
+            font-size: 15px;
+            margin-right: 18px;
+            margin-left: 20px;
+            white-space: nowrap;
+        }
+        .fidelity-footer-link {
+            color: #2062b8;
+            text-decoration: none;
+            font-size: 15px;
+            margin-right: 24px;
+            white-space: nowrap;
+            line-height: 1.2;
+        }
+        .fidelity-footer-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 900px) {
+            .fidelity-footer-sites-inner {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+                padding-left: 12px;
+            }
+            .fidelity-footer-sites-label {
+                margin-left: 0;
+            }
+        }
+        .fidelity-legal-section {
+            width: 100%;
+            background: #f3f3f5;
+            display: flex;
+            justify-content: center;
+            padding: 0 0 32px 0;
+        }
+        .fidelity-legal-content {
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            max-width: 900px;
+            width: 90%;
+            margin-top: 0;
+            padding: 28px 30px 28px 30px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #444;
+            line-height: 1.55;
+        }
+        .fidelity-legal-terms {
+            margin-bottom: 16px;
+        }
+        .fidelity-legal-link {
+            color: #b23c8a;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .fidelity-legal-link:hover {
+            text-decoration: underline;
+        }
+        .fidelity-legal-disclosure {
+            margin-top: 18px;
+            font-size: 13px;
+            color: #444;
+        }
+        .fidelity-legal-content b {
+            font-weight: 600;
+        }
+        .fidelity-legal-content i {
+            font-style: italic;
+        }
+        @media (max-width: 900px) {
+            .fidelity-legal-content {
+                padding: 12px 6px 12px 6px;
+                font-size: 13px;
+            }
+        }
+        .fidelity-footer {
+            width: 100%;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 0 0 0;
+            border-top: 1px solid #e0e0e0;
+        }
+        .fidelity-footer-inner {
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 24px 0 0 0;
+            min-height: 120px;
+        }
+        .fidelity-footer-links {
+            display: flex;
+            flex: 2;
+            gap: 50px;
+            font-size: 14px;
+            color: #2062b8;
+        }
+        .fidelity-footer-links a {
+            color: #2062b8;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .fidelity-footer-links a:hover {
+            text-decoration: underline;
+        }
+        .fidelity-footer-connect {
+            flex: 1.2;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        .fidelity-footer-connect-title {
+            color: #51912c;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        .fidelity-footer-connect-search {
+            margin-bottom: 8px;
+        }
+        .fidelity-footer-zip {
+            width: 70px;
+            margin-left: 6px;
+            margin-right: 2px;
+            font-size: 13px;
+            padding: 2px 4px;
+        }
+        .fidelity-footer-search-btn {
+            font-size: 13px;
+            padding: 2px 8px;
+            background: #eee;
+            border: 1px solid #bbb;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .fidelity-footer-social {
+            margin-top: 6px;
+        }
+        .fidelity-footer-social a {
+            color: #2062b8;
+            margin-right: 8px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .fidelity-footer-social a:hover {
+            text-decoration: underline;
+        }
+        .fidelity-footer-bottom {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 0 12px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-top: 1px solid #e0e0e0;
+        }
+        .fidelity-footer-logo img {
+            height: 32px;
+            margin-bottom: 2px;
+        }
+        .fidelity-footer-bottom-links {
+            font-size: 13px;
+            color: #2062b8;
+            margin-bottom: 4px;
+        }
+        .fidelity-footer-bottom-links a {
+            color: #2062b8;
+            text-decoration: none;
+        }
+        .fidelity-footer-bottom-links a:hover {
+            text-decoration: underline;
+        }
+        .fidelity-footer-copyright {
+            font-size: 12px;
+            color: #444;
+            margin-top: 2px;
+        }
+        .fidelity-footer-copyright a {
+            color: #2062b8;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .fidelity-footer-copyright a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 900px) {
+            .fidelity-footer-inner {
+                flex-direction: column;
+                gap: 18px;
+                padding: 18px 8px 0 8px;
+            }
+            .fidelity-footer-links {
+                flex-direction: column; /* Stack links vertically */
+                gap: 10px; /* Adjust gap for stacked links */
+            }
+            .fidelity-footer-connect {
+                padding-left: 0;
+                margin-top: 18px;
+                text-align: center; /* Center connect section */
+            }
+            .fidelity-footer-connect-search {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .fidelity-footer-zip {
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 5px;
+            }
+            .fidelity-footer-search-btn {
+                margin-top: 5px;
+            }
+            .fidelity-footer-social {
+                justify-content: center; /* Center social links */
+            }
+            .fidelity-footer-bottom {
+                padding: 8px 8px 8px 8px;
+                align-items: center; /* Center bottom content */
+            }
+            .fidelity-footer-bottom-links {
+                text-align: center;
+            }
+            .fidelity-footer-copyright {
+                text-align: center;
+            }
+        }
+        /* Fidelity Account Blocked Section */
+.fidelity-blocked-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #ffffff, #e5f5ee, #d6f0e6);
+  padding: 40px 60px;
+  font-family: Arial, sans-serif;
+  color: #1d2d35;
+}
+
+.fidelity-blocked-left,
+.fidelity-blocked-center,
+.fidelity-blocked-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.fidelity-blocked-call-label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.fidelity-blocked-call-number {
+  font-size: 22px;
+  font-weight: bold;
+  color: #b40000;
+  margin-bottom: 15px;
+}
+
+.fidelity-blocked-call-number.green {
+  color: #107d58;
+}
+
+.fidelity-blocked-desc {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.fidelity-blocked-center h1 {
+  font-size: 28px;
+  color: #1d2d35;
+  margin-bottom: 20px;
+}
+
+.fidelity-blocked-getstarted {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  background-color: #107d58;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.fidelity-blocked-getstarted:hover {
+  background-color: #0d674b;
+}
+
+.fidelity-blocked-img {
+  width: 100%;
+  /* max-width: 20px; */
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fidelity-blocked-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .fidelity-blocked-left,
+  .fidelity-blocked-center,
+  .fidelity-blocked-right {
+    padding: 10px;
+  }
+
+  .fidelity-blocked-img {
+    margin-top: 20px;
+  }
+}
+
+
+ .login-container {
+            
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            margin-left: 600px;
+            margin-top: 70px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none; /* To make it look like a button */
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+            scale: 0.95;
+        }
+        
