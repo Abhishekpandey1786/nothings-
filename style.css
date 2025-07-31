@@ -1419,6 +1419,6 @@
 
     .login-btn {
         font-size: 16px;
-        padding: 10px;
+        /* padding: 0px; */
     }
 }
